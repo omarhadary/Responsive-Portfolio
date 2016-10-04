@@ -90,17 +90,6 @@ h3 {
     margin-top: 20px;
 }
 
-h4 {
-    background-color: #4aaaa5;
-    bottom: 60px;
-    color: #fff;
-    font-size: 18px;
-    padding: 15px 0;
-    position: relative;
-    text-align: center;
-    width: 100%;
-}
-
 textarea,input {
     display: block;
     width: 100%;
@@ -115,8 +104,9 @@ textarea {
     border: 1px solid #ddd;
     float: left;
     margin: 20px 3px 20px 250px;
+    max-width: 650px;
     padding: 7.5px;
-    width: 650px;
+    width: 100%;
 }
 
 .mainContent_title {
@@ -130,19 +120,33 @@ textarea {
     width: 200px;
 }
 
-.portfolioImages {
-    float: left;
-}
-
 .projects {
     float: left;
-    margin-top: 10px;
-    padding: 12px;
+    margin: 20px 0 25px 20px;
+    overflow: auto;
+    position: relative;
+    width: 274px;
+}
+
+.projects:nth-child(even) {
+    margin-right: 40px;
 }
 
 .projectPhoto {
     height: 180px;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
+}
+
+h4 {
+    background-color: #4aaaa5;
+    bottom: 20px;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 
 a.mainContent__button {
@@ -197,6 +201,199 @@ footer {
     text-align: center;
 }
 /*................media queries...........*/
+
+@media screen and (max-width: 980px) {
+    .wrapper {
+            
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        
+
+        h1 {
+            color: yellow;
+            margin-left: 35px;
+            padding: 17px;
+        }
+
+        ul {
+            font-size: 1em;
+            margin-right: 10%;
+            padding-top: 25px;
+        }
+       
+        h2 {
+            margin: 0 10px 0 0px;
+        }
+
+        .mainContent {
+            float: left;
+            margin: 30px 0 35px 35px;
+            max-width: 768px;
+            padding: 15px;
+            overflow: hidden;
+            width: 45%;
+        }
+
+        .headShot {
+            
+            height: 90%;
+            padding-left: 0px;
+            width: 90%;
+        }
+        
+        p {
+            margin: 25px;
+        }
+
+        .projects {
+            height: 90%;
+            width: 90%;
+        }
+
+        .projectPhoto {
+            max-height: 500px;
+            max-width: 768px;
+            
+    }
+
+        h3 {
+            margin-left: 20px;
+        }
+
+        textarea,input {
+            margin-left: 20px;
+            width: 88%;
+        }
+
+        textarea {
+            height: 180px;
+        }
+
+        .mainContent__button {
+            margin-bottom: 200px;
+        }
+
+        .sidebar {
+            float: left;
+            margin: 30px 25px 30px 35px;
+            padding: 15px;
+            width: 34%;
+        }
+
+        .sociallink {
+        max-height: 20%;
+        max-width: 20%;
+        
+        }
+
+        footer {
+            width: 100%;
+        }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    
+
+    h1 {
+        color: green;
+        margin-left: 35px;
+        padding: 15px;
+    }
+
+    ul {
+        font-size: 1em;
+        margin-right: 1%;
+        padding-top: 25px;
+    }
+   
+    h2 {
+        margin: 0 20px 0 0px;
+    }
+
+    .mainContent {
+        float: none;
+        margin: 25px 0 0 35px;
+        max-width: 768px;
+        padding: 15px;
+        overflow: hidden;
+        width: 85%;
+    }
+
+    .headShot {
+        
+        height: 40%;
+        padding-left: 5px;
+        width: 40%;
+    }
+    
+    p {
+        margin: 25px;
+    }
+
+    .projects {
+        height: 40%;
+        width: 40%;
+    }
+
+    .projectPhoto {
+        max-height: 500px;
+        max-width: 768px;
+        
+}
+
+    h3 {
+        margin-left: 25px;
+    }
+
+    textarea,input {
+        margin-left: 25px;
+        width: 88%;
+    }
+
+    textarea {
+        height: 180px;
+    }
+
+    .mainContent__button {
+        margin-bottom: 200px;
+    }
+
+    .sidebar {
+        float: left;
+        margin: 30px 25px 30px 35px;
+        padding: 15px;
+        width: 85%;
+    }
+
+    .sociallink {
+    max-height: 10%;
+    max-width: 10%;
+    
+    }
+
+    footer {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 640px) {
     
     .wrapper {
@@ -242,8 +439,9 @@ footer {
     .mainContent {
         float: none;
         margin: 25px;
-        padding: 0px;
-        width: 90%;
+        padding: 15px;
+        overflow: hidden;
+        width: 85%;
     }
 
     .headShot {
@@ -258,15 +456,15 @@ footer {
     }
 
     .projects {
-        margin: 70px 0px -80px 0px;
-        padding: 0px 25px 0px 25px;
+        height: 90%;
         width: 90%;
     }
 
-    .projectPhoto {
-        height: 100%;
-        width: 100%;
-    }
+.projectPhoto {
+    max-height: 260px;
+    max-width: 640px;
+    
+}
 
     h3 {
         margin-left: 40px;
@@ -281,30 +479,23 @@ footer {
         height: 180px;
     }
 
-    a.mainContent__button {
-        
+    .mainContent__button {
+        margin-bottom: 200px;
     }
 
     .sidebar {
-        float: none;
+        float: left;
         margin: 30px 25px 30px 25px;
-        padding: 0px;
-        width: 90%;
+        padding: 15px;
+        width: 85%;
     }
 
     .sociallink {
     max-height: 10%;
     max-width: 10%;
+    padding-bottom: 15px;
 
     footer {
         width: 100%;
     }
-}
-
-@media screen and (max-width: 768px) {
-    
-}
-
-@media screen and (max-width: 980px) {
-    
 }
